@@ -1,0 +1,141 @@
+<link rel="stylesheet" href="/static/CSS/STYLES.bootstrap.min.css">
+<script src="https://kit.fontawesome.com/db536fcb88.js" crossorigin="anonymous"></script>
+<link rel="shortcut icon" href="/static/IMG/logo FINAL.png">
+<link rel="stylesheet" href="/static/CSS/styleBootstrap.css">
+<link rel="stylesheet" href="/static/CSS/STYLES.bootstrap.min.css">
+<link rel="stylesheet" href="/static/CSS/STYLES.CSS">
+
+    {% if cart.products.exists %} 
+    <!-- TEMPLATE -->
+            
+    <div class="container-fluid color8 pt-5 pb-2">
+          
+    <!-- TITULO -->
+    <h1 class="titulo imgcart">
+            <img src="../../../static/IMG/LogoReal-removebg-preview.png" alt="">
+        COLOR IN</h1>  
+          
+    <!-- TITULO CARRITO -->
+    <div class="row">
+        <div class="col">
+            <h2 ><i class="fa-solid fa-cart-shopping"></i> Carrito de Compras</h2>  
+        </div>
+              
+    <!-- PRIMERA FILA-BARRA DE REFERENCIAS -->
+    </div>
+        <div class="row mb-3 justify-content-between">
+        <div class="col-md-1 color11 text-white">PRO</div>
+        <div class="col-md-2 color11 text-white">IMAGEN</div>
+        <div class="col-md-3 color11 text-white">NOMBRE</div>
+        <div class="col-md-1 color11 text-white">CANTIDAD</div>
+        <div class="col-md-3 color11 text-white">PRECIO</div>
+        <div class="col-md-2 color11 text-white">ELIMINAR</div>
+    </div>
+          
+    <!-- SEGUNDA FILA -->
+ 
+    {% for cp in cart.products_related %} 
+        {% with product=cp.product %}
+            <div class="row mb-3 justify-content-between" >
+                <div class="col-md-1" >
+                    <a class="nav-link text-dark">  {{ forloop.counter }} </a>
+                </div>
+
+                <!--img producto-->
+                <div class="col-md-2 producto" > 
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}" alt="Imagen del producto" width="60" height="60">
+                    {% endif %}
+                </div>
+
+                <!-- nombre producto -->
+                <div class="col-md-3" >
+                    <a class=" nav-link text-dark">{{ product.name }}</a>
+                </div>
+                            
+                <!-- cantidad -->
+                <div class="col-md-1" >
+                    <a class=" nav-link text-dark"> {{ cp.quantity }} </a>
+                </div>
+
+                <!-- precio unidad -->
+                <div class="col-md-3" >
+                    <a class="nav-link text-dark">$ {{ product.price }} </a>
+                </div>
+
+                <!-- eliminar -->
+                <div class="col-md-2 ">
+                    {% include 'carts/snippets/remove.html' %}
+                </div>
+                
+            </div>
+        {% endwith %}
+    {% endfor %}
+          
+    <!-- TERCERA FILA -->
+    <div class="row mb-3 justify-content-flex-start" >
+        <!-- Descuento -->
+        <div class="col-md-1">
+            <label for="">SUBTOTAL({{cart.products.count}}):</label>
+        </div>
+          
+        <div class="col-md-3">
+            <a class="nav-link "> <strong>$ {{ cart.subtotal }}</strong></a>
+        </div>
+    </div>
+          
+    <!-- CUARTA FILA -->
+    <div class="row mb-3 justify-content-flex-start border" >
+        <!-- Total -->
+         <div class="col-md-1">
+            <label for=""><strong>TOTAL:</strong></label>
+        </div>
+          
+        <div class="col-md-3">
+            <a class="nav-link text-danger"> <strong>$ {{ cart.total }}</strong></a>
+        </div>
+    </div>     
+
+    <!-- BOTON SEGUIR COMPRA  -->
+    <div class="row mb-3">
+        <div class="col d-grid gap-2 d-sm-grid">
+            <a href="{% url 'catpinturas' %}" class="btn btn-dark d-sm-block">SEGUIR COMPRANDO</a>
+        </div>
+        <div class="col d-grid gap-2 d-sm-grid">
+             <a href="{% url 'index' %}" class="btn btn-dark d-sm-block">SALIR</a>
+        </div>            
+     </div>
+
+
+          <!-- BOTON PARA ORDEN DE COMPRA-->
+     <div class="col d-grid gap-2 d-sm-grid">
+        <a href="{% url 'orders:order' %}" class="btn btn-success d-sm-block">SEGUIR CON EL PAGO 💸</a>
+    </div>
+               
+          
+          
+          
+          
+              <script src="../JS/bootstrap.bundle.min.js"></script>
+            <!-- FIN -->
+    
+
+
+
+    
+    {% else %}
+        <div class="col">
+            <p class="h3">Carrito Vacio <i class="fa-solid fa-moon"></i></p> 
+        </div>
+        <div class="row mb-3">
+            <div class="col d-grid gap-2 d-sm-grid">
+                <a href="{% url 'catpinturas' %}" class="btn btn-dark d-sm-block">IR A COMPRAR</a>
+            </div>
+            <div class="col d-grid gap-2 d-sm-grid">
+                 <a href="{% url 'index' %}" class="btn btn-dark d-sm-block">SALIR</a>
+            </div>            
+         </div>
+        
+    {% endif %}
+
+</body>

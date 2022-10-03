@@ -1,0 +1,49 @@
+{% load cart_extras %}
+<div class="card">
+    <div class="card-body ">
+        <div class="font-weight-bold"> <!-- titulo -->
+            Resumen Del Pedido
+        </div>
+        <div class=""><!-- div table -->
+            <table class="table table-borderless table-sm"> <!--tabla  -->
+                <thead>
+                    <tr>
+                        <th scope="col"></th> <!-- filas   -->
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Total Productos:</td> <!-- Fila productos -->
+                        <td>{{ cart.total }}</td> <!-- cart total y precio -->
+                    </tr>
+                    <tr>
+                        <td>Total Envio:</td>
+                        <td>{{ order.shipping_total }}</td>  <!-- valor total del envio el cual se definio en models por 5dolars -->
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div>
+            <hr>
+            <div class="font-weight-bold text-danger mb-3">
+                Total (Impuestos Incluidos)
+                <div class="d-inline-block mb-3">
+                    {{ order.total }}
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="d-grid gap-2 col-6 mx-auto mb-3">
+    <a href="{{ next_url }}" class="btn btn-dark d-sm-block">CONFIRMAR PEDIDO</a>
+    
+</div>
+
+
+
+

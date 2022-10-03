@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/SOFTWAT/static/CSS/all.min.css' %}">
+    <link rel="shorcurt icon" href="/static/IMG/logo FINAL.png">
+   <link rel="stylesheet" href="/static/CSS/all.min.css">
+   <link rel="stylesheet" href="/static/CSS/styleBootstrap.css">
+   <link rel="stylesheet" href="/static/CSS/STYLES.bootstrap.min.css">
+   <link rel="stylesheet" href="/static/CSS/STYLES.CSS">
+   <link rel="stylesheet" href="/static/CSS/styleVentas.css">
+   <link rel="stylesheet" href="/static/CSS/videocss.css">
+   
+    <title>COLOR IN</title>
+</head>
+
+<body>
+    <!-- codigo video Y CONTENEDOR DEL VIDEO -->
+    <header class="header content">
+        <div class="header-video" >
+            <!-- autoplay para que el video se reproduzca loop para que se reproduzca aunque acabe -->
+            <video autoplay loop playsinline muted 
+             src="/static/video/VIDEO.mp4" ></video>
+        </div>
+
+        <div class="header-overlay"></div>
+
+<!-- contenido en frente del video  -->
+        <div class="header-content">
+
+            <!-- CONTENEDOR DE ATRAS DEL FORMULARIO -->
+            <div class="container color8 mt-2 pt-2 pb-2 ">
+                <div class="row">
+                    
+<!-- PARA PONER IMAGENES DESDE BOOTSTRAP  Y ACOMODAR-->
+                    <nav class="navbar ">
+                        <a class="navbar-brand" href="#">
+                          <img src="/static/IMG/LogoReal-removebg-preview.png" width="60" height="60" class="d-inline-block align-top" alt="">
+                        
+                        </a>
+                      </nav>
+
+<!-- FORMULARIO REGISTRO -->
+                    <div class="titulo">
+                        <h1>Inicio de Sesion</h1>
+                    </div>
+                    <form class="needs-validation"  method="post"  novalidate >
+                        {% csrf_token %} 
+
+                        <div class="form-row " >
+                        <div class="form-group col-md-12">
+                            <label for="">Usuario</label>
+                            <input type="text" placeholder="Usuario" name="username" class="form-control" required>
+                            <div class="valid-feedback"></div>
+                        </div>
+                        <div class="form-row " >
+                        <div class="form-group col-md-12 mb-3">
+                            <label for="">Contraseña</label>
+                            <input type="password" placeholder="Contraseña" name="password" class="form-control" required>
+                            <div class="valid-feedback"></div>
+                        </div>
+                        <div>
+                            <input type="submit"class="btn btn-dark mb-3" id="a" value="Ingresar">
+                            <a class="btn btn-dark mb-3" href="{% url 'index' %}">Salir</a>
+                        </div>  
+
+                        <div>
+                            <a  href="{% url 'iniciocliente' %}">Registrarse</a>
+                        </div>  
+                        
+
+                    </div>
+                    </form> 
+        
+                </div>
+        
+            </div>
+
+
+
+
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <!-- codigo formulario -->
+
+
+                        <!-- CODIGO PARA VALIDAR FORMULARIOS -->
+                        <script>// Example starter JavaScript for disabling form submissions if there are invalid fields
+                            (function () {
+                                'use strict'
+
+                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                var forms = document.querySelectorAll('.needs-validation')
+
+                                // Loop over them and prevent submission
+                                Array.prototype.slice.call(forms)
+                                    .forEach(function (form) {
+                                        form.addEventListener('submit', function (event) {
+                                            if (!form.checkValidity()) {
+                                                event.preventDefault()
+                                                event.stopPropagation()
+                                            }
+
+                                            form.classList.add('was-validated')
+                                        }, false)
+                                    })
+                            })()</script>
+                        <script src="../../JS/bootstrap.bundle.min.js"></script>
+</body>
+    <!-- Para subir -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</html>
+
+
+  
+
+</body>
+
+</html>
+
+
+<div class="login-box">
+    <div class="titulo">
+        <h2>COLOR IN</h2>
+    </div>
+    <form method="post">
+        {% csrf_token %} 
+    <div class="user-box">
+        <input type="text" placeholder="Usuario" name="username" class="form-control" required>
+    </div>
+    <div class="user-box">
+        <input type="password" placeholder="Contraseña" name="password" class="form-control" required>
+    </div>
+    <div>
+        <input type="submit" id="a" value="Ingresar">
+        <a href="{% url 'index' %}">Salir</a>
+    </div>
+    </form> 
+
+</div>
+
+</div>

@@ -1,0 +1,165 @@
+
+<link rel="stylesheet" href="/static/CSS/tarjetas.css">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      property="og:title"
+      content="Product Card Responsive | Nike Zoom KD 12"
+    />
+    <meta
+      property="og:description"
+      content="Responsive and animated product card using HTML, CSS and JavaScript"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://fariasmateuss.github.io/product/"
+    />
+    <meta
+      name="description"
+      content="Responsive Product Card Nike Zoom KD 12"
+    />
+    <meta
+      name="keywords"
+      content="Product, Shoe, Card, Responsive, HTML, CSS, JavaScript, Nike Zoom KD 12"
+    />
+    <meta name="author" content="Mateus V. Farias" />
+
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{{ product.name }}</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <div class="card">
+            <div class="shoeBackground">
+              <div class="gradients">
+                <div class="gradient second" color="blue"></div>
+              </div>
+              <h1 class="nike">color_in</h1>
+              <img src="/static/IMG/LogoReal-removebg-preview.png" alt="Logo" class="logo" />
+              <a href="{% url 'index' %}" class="share"></a>
+
+              <img
+                src="{{ product.image.url }}"
+                alt="Shoe Blue"
+                class="shoe show"
+                color="blue"
+                width="300"
+                height="300"
+              />
+            
+              <img
+                src="./src/assets/red.png"
+                alt="Shoe Red"
+                class="shoe"
+                color="red"
+              />
+              <img
+                src="./src/assets/green.png"
+                alt="Shoe Green"
+                class="shoe"
+                color="green"
+              />
+              <img
+                src="./src/assets/orange.png"
+                alt="Shoe Orange"
+                class="shoe"
+                color="orange"
+              />
+              <img
+                src="./src/assets/black.png"
+                alt="Shoe Black"
+                class="shoe"
+                color="black"
+              />
+            </div>
+            <div class="info">
+              <div class="shoeName">
+                <div>
+                  <h1 class="big">{{ product.name }}</h1>
+                </div>
+                <h3 class="small">Men's running shoes</h3>
+              </div>
+              <div class="description">
+                <h4 class="title">Informacion Del Producto</h4>
+                <p class="text">
+                  {{ product.description }}
+                </p>
+              </div>
+              <div>
+                <form action="{% url 'carts:add' %}" method="post">
+                    {% csrf_token %}
+                
+                    <input type="hidden" name="product_id" value="{{ product.id }}">  
+                    <div class="position-relative">
+            
+                        <button type="button" class="btn btn-dark d-inline" id="remove">-</button>
+                
+                         <input type="number" value="1" class="form-control col-sm-1 d-inline" id="quantity" name="quantity" readonly>
+                    
+                        <button type="button" class="btn btn-dark" id="add">+</button>
+                    </div>
+                    <div class="price">
+                      <h1>
+                        <i class="fas fa-dollar-sign"></i>
+                        {{ product.price }}
+                      </h1>
+                    </div>
+                  </div>
+                    <div class="buy-price">
+                      <button type="submit" class="buy">
+                        AGREGAR AL CARRITO
+                      </button>
+                    </div>
+                    <div>
+                  
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>  
+
+      const add = document.getElementById('add')
+      const remove = document.getElementById('remove')
+      const quantity = document.getElementById('quantity')
+  
+      add.addEventListener('click', function(){
+          quantity.value = parseInt(quantity.value) + 1
+      })
+  
+      remove.addEventListener('click', function(){
+          value = parseInt(quantity.value)
+  
+          if(value != 1){
+              value = value -1
+          }
+          quantity.value = value
+  
+      })
+  </script>
+  
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="./src/index.js"></script>
+    <!-- Import the component -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>

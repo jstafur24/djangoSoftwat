@@ -1,0 +1,111 @@
+{% extends "PAGINA_PRINCIPAL.HTML" %}
+
+{% block title %} PQRS {% endblock %}
+
+{% block content %}
+
+<body>
+    
+<!-- csrf_token para que no se roben la informacion -->
+
+
+      <div class="container color mt-5 pt-5 pb-2">
+        <div class="row">
+
+            <div class="titulo">
+                <h1>QUEJAS Y RECLAMOS 📬</h1>
+            </div>
+            <form method="post">
+                {% csrf_token %} 
+
+
+
+
+            <div class="form-row ">
+             <div class="form-group col-md-6">
+              <label for="nombre">Usuario:</label>
+              <input class="form-control" id="nombre" type="text" name="name" placeholder="Usuario"/>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+                <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+            <label for="email" >Email:</label>
+          <input class="form-control"  id="email" type="text" name="email" placeholder="Email"/>
+        </div>
+    </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                <label for="nombre">Asunto</label>
+                <input class="form-control" id="nombre" type="text" name="subject" class="form-control" placeholder="Asunto"/>
+                  <div class="valid-feedback">
+                      Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                      Please choose a username.
+                  </div>
+              </div>
+            </div>
+
+
+              <div class="col-sm-push-3 mt-2 mb-3">
+                <label for="nombre">Mensaje</label>
+                <input class="form-control" id="nombre" type="text-tarea" name="message" class="form-control" placeholder="Escriba su duda o queja aqui "/>
+                  <div class="valid-feedback">
+                      Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                      Please choose a username.
+                  </div>
+              </div>
+
+
+
+
+              <button type="submit" class="btn btn-light mb-3">Enviar</button>
+
+
+<a href="{% url 'index' %}" class="btn btn-dark mb-3">Volver</a>
+            </div>
+            </form> 
+
+        </div>
+
+    </div>
+
+    <script src="../COLOR-IN/JS/bootstrap.bundle.min.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
+
+</body>
+{% endblock %}
+</html>

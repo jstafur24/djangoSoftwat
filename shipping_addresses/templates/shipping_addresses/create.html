@@ -1,0 +1,17 @@
+{% extends "PAGINA_PRINCIPAL.HTML" %}
+
+
+{% block content %}
+
+
+<div class="col">
+    <div class="h3">
+        Registra tu nueva direccion
+    </div>
+    <div class="">
+        {% include 'shipping_addresses/snippets/form.html' with message='Agregar' %}
+    </div>
+
+</div>
+
+{% endblock %}

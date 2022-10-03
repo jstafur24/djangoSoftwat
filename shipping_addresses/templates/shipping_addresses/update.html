@@ -1,0 +1,20 @@
+{% extends "PAGINA_PRINCIPAL.HTML" %}
+
+
+{% block content %}
+
+
+<div class="col">
+    <div class="h3">
+        Editar Direccion
+    </div>
+    <div class="">
+        {% include 'shipping_addresses/snippets/form.html' with message='Actualizar' %}
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}

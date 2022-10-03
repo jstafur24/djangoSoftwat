@@ -1,0 +1,73 @@
+{% extends "PAGINA_PRINCIPAL.HTML" %}
+
+
+{% block content %}
+
+<div class="col-8">
+  <div class="h3">
+    INFORMACION DEL PEDIDO
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-4">
+                <div class="font-weight-bold">
+                    INFORMACION DE LA DIRECCION
+                </div>
+                <div class="car-text">
+                    {{ shipping_address.address }}
+                </div>
+                <div class="card-text">
+                    {{ shipping_address.line1 }}
+                </div>
+                <div class="card-text">
+                    {{ shipping_address.reference }}
+                </div>
+                <div class="card-text">
+                    {{ shipping_address.codpost }}
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="font-weight-bold">
+                    METODO DE PAGO
+                </div>
+                <div class="card-text">
+                    CONTRAENTREGA
+                    <div>
+                    (Tendra que pagar al trabajador cuando llegue el pedido)
+                </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+  </div>
+  <div class="mt-3">
+    <div class="card">
+        <div class="card-body">
+            {% for product in cart.products.all %}
+            {% include 'orders/snippets/product.html' %}
+            {% endfor %}
+          
+        </div>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="col mb-3">
+{% url 'orders:complete' as next_url %}
+{% include 'orders/snippets/resume.html' with next_url=next_url %}
+
+<div class="d-grid gap-2 col-6 mx-auto mb-3">
+    
+    <a href="{% url 'orders:cancel' %}" class="btn btn-danger d-sm-block">CANCELAR ORDEN</a>
+    
+</div>
+</div>
+
+
+{% endblock %}

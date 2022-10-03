@@ -1,0 +1,34 @@
+{% extends "PAGINA_PRINCIPAL.HTML" %}
+
+
+{% block content %}
+
+
+<div class="col">
+    {% if shipping_address %}
+    <div class="h3">
+        LA DIRECCION REGISTRADA ES:
+    </div>
+    <div class="">
+        {% include 'shipping_addresses/snippets/shipping_address.html' %}
+        <a href="{% url 'orders:select_address' %}">Cambiar Direccion</a>
+    </div>
+   {% else %}
+   <div class="h3">
+                    REGISTRA TU DIRECCION DE ENVIO
+   </div>
+   <div class="">
+    {% url 'orders:address' as next_url %}
+    <div class="mb-2">
+    <a href="{% url 'shipping_addresses:create' %}?next={{ next_url }}">Nueva Direccion De Envio</a>
+    </div>
+   </div>
+   {% endif %}
+   <div class="d-grid gap-2 col-6 mx-auto mb-3">
+    <a href="{% url 'orders:confirm' %}" class="btn btn-dark d-sm-block">SEGUIR CON MI PEDIDO</a>
+    
+</div>
+</div>
+
+
+{% endblock %}

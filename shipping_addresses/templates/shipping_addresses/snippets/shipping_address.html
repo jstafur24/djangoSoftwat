@@ -1,0 +1,27 @@
+<div class="card">
+<h5 class="card-header"></h5>
+<div class="card-body ">
+    <!-- Estos son titulos que van a salir en la tarjetas las cual es la lista de direcciones -->
+    <h5 class="card-tittle text-dark">{{ shipping_address.address }}</h5>
+    <div class="card-tittle">
+        {{ shipping_address.reference }}
+    </div>
+    <div class="card-tittle">
+        {{ shipping_address.codpost }}
+    </div>
+
+    {% if edit %}
+    <div class="mt-2 ">
+    <a href="{% url 'shipping_addresses:update' shipping_address.pk %}" class="btn btn-dark">Editar</a>
+    {% if shipping_address.default %}
+    <div class="text-info">
+        Direccion Principal
+    </div>
+    {% else %}
+    <!-- <a href="{% url 'shipping_addresses:default' shipping_address.pk %}" class="btn btn-warning">default</a> -->
+    <a href="{% url 'shipping_addresses:delete' shipping_address.pk %}" class="btn btn-danger">Eliminar</a>
+    {% endif %}
+    {% endif %}
+    </div>
+</div>
+</div>

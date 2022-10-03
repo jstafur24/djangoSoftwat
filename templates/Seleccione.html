@@ -1,0 +1,46 @@
+{% extends "PAGINA_PRINCIPAL.HTML" %}
+
+{% block title %} DOMICILIO {% endblock %}
+
+{% block content %}
+<body style="background-color: rgb(199, 199, 199);">
+     <!-- FILA 1 -->
+<div class="container-fluid mt-5 color8 pt-5 pb-2 mb-5">
+    <form action="" class="needs-validation" novalidate>
+    <div class="titulo">
+        <h1>📦SELECCIONE EL SERVICIO </h1>
+    </div>
+<div class="row mb-3">
+    <div class="col d-grid gap-2 d-sm-grid mb-5">
+        <a href="{% url 'actualizar' %}" class="btn btn-dark d-sm-block">📦ACTUALIZAR FECHA DE ENTREGA</a>
+    </div>
+    <div class="col d-grid gap-2 d-sm-grid mb-5">
+        <a href="{% url 'estado' %}" class="btn btn-dark d-sm-block">📦ESTADO DEL DOMICILIO</a>
+</div>
+<div>
+    
+{% if user.is_authenticated %}
+    <div class="col d-grid gap-2 d-sm-grid mb-5">
+        <a href="{% url 'shipping_addresses:shipping_addresses'%}" class="btn btn-dark d-sm-block">Mis Direcciones 📍</a>
+</div>
+{% endif %}
+<!-- para que se muestre para personas que solo estan logeadas -->
+
+</div>
+
+<div class="row mb-3">
+    <div class="col d-grid gap-2 d-sm-grid mb-5">
+        <a href="{% url 'index' %}" class="btn btn-dark d-sm-block">Volver a la pagina principal</a>
+
+    </div>
+
+
+
+</form>
+</div>
+
+    </div>
+
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+</body>
+{% endblock %}

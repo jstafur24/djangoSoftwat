@@ -1,0 +1,174 @@
+{% extends "PAGINA_PRINCIPAL.HTML" %}
+
+{% block title %} DOMICILIO {% endblock %}
+
+{% block content %}
+        <body style="background-color: rgba(105, 1, 1, 0);">
+        <form  action="/admin/"  method="post" class="needs-validation" novalidate>
+            {% csrf_token %} 
+            
+        <!-- 1 fila -->
+        <div class="container-fluid color8 pt-5 pb-2">
+            <div class= "titulo">
+                <p>ACTUALIZAR ENTREGA DEL DOMICILIO 📧</p>
+            </div>
+        <div class="row justify-content-between mb-3">
+
+            <div class="col-sm-5">
+                <input id="name" type="text" class="form-control" placeholder="Nombre" required maxlength="20" minlength="5">
+                <div class="valid-feedback">Perfecto!</div>
+                                <div class="invalid-feedback">Completa La Celda.</div>
+            </div>
+            <div class="col-sm-5">
+                <input id="lastname" type="text" class="form-control" placeholder="Apellido" required maxlength="20" minlength="5">
+                <div class="valid-feedback">Perfecto!</div>
+                                <div class="invalid-feedback">Completa La Celda.</div>
+            </div>
+           
+
+        </div>
+
+        <!-- 2 fila -->
+        <div class="row mb-3 justify-content-between">
+         
+            <div class="col-sm-2">
+                <input id="ide" class="form-control" placeholder="Identificación" type="text" maxlength="10" minlength="10" required >
+                <div class="valid-feedback">Perfecto!</div>
+                                <div class="invalid-feedback">Completa La Celda.</div>
+            </div>
+            <div class="col-sm">SELECCIONAR FECHA DE ENTREGA
+                <input id="date" type="date" class="form-control" required>
+                <div class="valid-feedback">Perfecto!</div>
+                                <div class="invalid-feedback">Completa La Celda.</div>
+            </div>
+        </div>
+
+        <!-- 3 fila -->
+        <div class="row mb-3">
+            <div class="col-sm-3">
+                <input id="email" type="email" placeholder="Correo Electronico" class="form-control" required>
+                <div class="valid-feedback">Perfecto!</div>
+                                <div class="invalid-feedback">Completa La Celda.</div>
+            </div>
+            <div class="col">
+                <input id="phone" type="tel" placeholder="Telefono" class="form-control" required maxlength="10" minlength="10" >
+                <div class="valid-feedback">Perfecto!</div>
+                                <div class="invalid-feedback">Completa La Celda.</div>
+            </div>
+            <div class="col-sm-4">
+                <input id="address" type="text" placeholder="Dirección" class="form-control" required maxlength="50" >
+                <div class="valid-feedback">Perfecto!</div>
+                                <div class="invalid-feedback">Completa La Celda.</div>
+            </div>
+            <div class="col-sm-2">
+                <input id="district" type="text" placeholder="Barrio" class="form-control" required>
+                <div class="valid-feedback">Perfecto!</div>
+                                <div class="invalid-feedback">Completa La Celda.</div>
+            </div>
+            <div class=" col-sm">
+            <select class="form-select" id="location" required >
+                <!-- <option Selected disable value sirve para dar validacion al formulario SELECT -->
+                <option selected disabled value="">LOCALIDAD...</option>
+                <option value="1">Chapinero</option>
+                <option value="2">Usaquen</option>
+                <option value="3">Usme</option>
+                <option value="4">Ciudad Bolivar</option>
+                <option value="5">Puente Aranda</option>
+                <option value="6">Rafael Uribe Uribe</option>
+                <option value="7">San Cristobal</option>
+                <option value="8">Suba</option>
+                <option value="9">SumaPaz</option>
+                <option value="10">Teusaquillo</option>
+                <option value="11">Tunjuelito</option>
+                <option value="12">Barrios Unidos</option>
+                <option value="13">Antonio Nariño</option>
+                <option value="14">Bosa</option>
+                <option value="15">Candelaria</option>
+                <option value="16">Engativa</option>
+                <option value="17">OTRO</option>
+            </select>
+            </div>
+        </div>
+
+        <!-- fila 4 -->
+        <DIV class="col-sm mb-3">Motivo
+        <input type="text" id="motive"  placeholder="MOTIVO POR EL CUAL QUIERE HACER EL CAMBIO DEL DOMICILIO" maxlength="100" class="form-control" required >
+        <div class="valid-feedback">Perfecto!</div>
+                                <div class="invalid-feedback">Completa La Celda.</div>
+    </DIV>
+
+
+        <!-- 5 FILA -->
+      
+
+    
+            <!-- 6 fila -->
+            <div class="row mb-3">
+                <div class="col d-grid gap-2 d-sm-grid mb-3">
+                    <input type="submit" class="btn btn-dark d-sm-block" value="Realizar Cambio">
+    
+                </div>
+    
+    
+                <div class="col d-grid gap-2 d-sm-grid mb-3">
+                    <input type="reset" class="btn btn-dark d-sm-block" value="Cancelar Cambio">
+                </div>
+
+           <div class=" d-sm-grid mb-3 ">
+                <a href="{% url 'domicilio' %}" class="btn btn-dark d-sm-block">Volver</a>
+            
+            </div>
+    
+
+
+        </form>
+      
+
+
+
+
+    </div>
+    
+
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script>
+
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict'
+    
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+    
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+    
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+    
+    </script>
+
+
+
+
+
+
+
+
+        </body>
+
+
+{% endblock %}
+
+    </head>
+    
+    </html>

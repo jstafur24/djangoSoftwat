@@ -1,0 +1,458 @@
+/*fuentes Texto*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Carter+One&family=Cinzel&family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Carter+One&family=Cinzel&family=Luckiest+Guy&family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Carter+One&family=Cinzel&family=Oleo+Script&family=Sanchez&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+*{
+    margin: 0%;
+}
+
+.nombre{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 7vw;    
+    background-image: url(../IMG/Logo.jpeg);
+    background-repeat: no-repeat;
+    font-family: 'Secular One', sans-serif;
+}
+
+nav {
+    padding: 0% 0%;
+    /*position: fixed;*/
+    
+}
+
+/*.titulin{
+    width: 35%;
+    text-align: center;
+    border: 2px solid white;
+}*/
+
+.navegador{
+    display: flex;
+    justify-content: space-around;
+    padding: 1vw;
+}
+
+.navegador a{
+    font-size: 2vw;
+    text-align: center;
+    color: black;
+    flex-wrap: center;
+    text-decoration: none;
+    font-family: 'Secular One', sans-serif;   
+}
+
+.navegador a:hover{
+    font-size: 2.5vw;
+    font-weight: bolder;
+}
+
+main{
+    background-color: rgba(0, 0, 0, 0.827);
+    padding: 20%;
+    color: white;
+}
+
+.contprincipal{
+    background-image: url(../IMG/fondo1.jpg);
+    padding: 20%;
+    color: white;
+}
+
+main h1{
+    text-align: center;
+    color:white;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 4vw;
+    text-shadow: 10px;
+}
+
+main p{
+    text-align: center;
+    padding: 2%;
+    font-size: 2.5vw;
+    
+}
+
+.BOTON1{
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    color: black;
+    text-decoration: none;
+    font-size: 2.5vw;
+    border-radius: 8%;
+    background-color: white;
+    break-before: column;
+}
+
+.BOTON1:hover{
+
+    color: white;
+    background-color: black;
+
+}
+
+
+
+div article{
+    margin: 2%;
+    
+    display: flex;
+    justify-content: center;
+}
+
+footer div{
+    margin: 2%;
+    
+    display: flex;
+    justify-content: center;
+
+}
+
+.PRODUCTOS{
+    margin:  1%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Secular One', sans-serif;
+    font-size: 3vw;
+
+}
+
+.SERVICIOS{
+    margin:  1%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Secular One', sans-serif;
+    font-size: 3vw;
+
+}
+
+
+
+.productos {
+    display: flex;
+    
+}
+
+.productos h2{
+    font-size: 3vw;
+}
+
+.productos p{
+    font-size: 1.3vw;
+}
+
+.producto1{
+    background-image: url(../IMG/pintura.jpeg);
+    color: rgb(0, 0, 0);
+    padding: 8%;
+    text-align: center;
+    width: 50%;
+}
+.producto2{
+    background-image: url(../IMG/Royo.jpeg);
+    background-color: beige;
+    color: black;
+    padding: 8%;
+    text-align: center;
+    width: 50%;
+}
+
+.servicio1{
+    background-image: url(../IMG/domicilio.jpg);
+    background-color: white;
+    color: black;
+    padding: 8%;
+    text-align: center;
+    width: 50%;
+}
+.servicio2{
+    background-image: url(../IMG/aplicacion.jpg);
+    background-color: beige;
+    color: black;
+    padding: 8%;
+    text-align: center;
+    width: 50%;
+}
+
+.img1{
+
+    max-width: 20%;
+    flex-wrap: center;
+    justify-content: center;
+}
+.img2{
+
+    max-width: 20%;
+    flex-wrap: center;
+    justify-content: center;
+}
+.img3{
+    max-width: 20%;
+    flex-wrap: center;
+    justify-content: center;
+}
+
+.FACEBOOK{
+    padding: 1%;
+}
+.INSTAGRAM{
+    padding: 1%;
+}
+.WHATSAPP {
+    padding: 1%;
+}
+.productos a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    padding: 3%;
+    background-color: white;
+    font-size: 1.5vw;
+}
+
+.productos a:hover{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 3%;
+    background-color: black;
+}
+
+.BOTON2{
+    border: 2px solid black;
+    padding: 2%;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+
+.BOTON2:hover{
+    border: 2px solid white;
+    padding: 2%;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
+
+.redes{
+    padding: 10%;
+}
+
+.xx{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1vw;
+    padding: 1%;
+}
+
+.xxformularios{
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-size: 1vw;
+        padding: 1%;
+}
+
+.CONTACTO{
+    display: flex;
+    justify-content:center ;
+    font-family: 'Secular One', sans-serif;
+    font-size: 2vw;
+}
+
+
+
+.Footer{
+    margin: 3px;
+    text-align: center;
+}
+
+.Footer div{
+    padding-top: 15px;
+}
+
+
+.Footer img {
+    padding: 15px;
+    width: 13%;
+}
+
+
+.Footer img:hover{
+    width: 15%;
+}
+
+
+/* Subir */
+.flecha{
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    border-radius: 10%;
+}
+
+
+.BOTONES1{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1%;
+}
+
+.BOTONES2{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1%;
+}
+
+.botons{
+    display: flex;
+    justify-content: flex-end;
+    width: 33%;
+}
+
+.header{
+    
+    width: 33%;
+    text-align: right;
+}
+
+.BOTON3{  
+    color: white;
+    font-size: 1vw;
+    text-decoration: none;
+    
+}
+
+/*Menù lateral*/
+
+#btn-menu{
+    display: none;
+}
+.container-menu{
+    position: absolute;
+    background-color: #1c1c1c;
+    width: 100%;
+    top: 0;left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.interfaz{
+    font-size: 1vw ;
+    text-align: start;
+    background-color: #fff;
+}
+/* Logo venta */
+
+
+/* Logo pagina */
+.logoulti{
+    width: 40%;
+    }
+
+.SALIR a{
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
+.SALIR :hover{
+color: white;
+}
+
+h4{
+    color: white ;
+}
+h5{
+    color: white;
+}
+
+.xx a{
+    text-decoration: none;   
+    color: white;
+}
+
+.carrito{
+    position: fixed;
+    right: 1%;
+    border-radius: 10%;
+    padding-top: 1.5%;
+}
+
+.carrito a{
+   font-size: 50%;
+}
+
+.tabla{
+    color: black;
+}
+
+
+
+.imgcart img{
+    width: 5%;
+    padding-right: 3px;
+}
+
+
+
+
+
+
+

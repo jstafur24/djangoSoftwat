@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static '/SOFTWAT/static/CSS/all.min.css' %}">
+    <link rel="shorcurt icon" href="/static/IMG/LogoReal-removebg-preview.png">
+   <link rel="stylesheet" href="../static/CSS/all.min.css">
+   <link rel="stylesheet" href="/static/CSS/styleBootstrap.css">
+   <link rel="stylesheet" href="/static/CSS/STYLES.bootstrap.min.css">
+   
+   <script src="https://kit.fontawesome.com/db536fcb88.js" crossorigin="anonymous"></script>
+    <title>{% block title %} COLOR IN {% endblock %}</title>
+</head>
+<body>
+<!-- INDEX PAGINA PRINCIPAL -->
+    <div class="nombre" id="COLOR IN">
+
+
+        <!-- INTERFAZ CODIGO -->
+    <header class="header">
+		<div class="container">
+		<div class="primero-menu">
+			<label for="btn-menu"  >
+                <img class="logoulti" src="../static/IMG/LogoReal-removebg-preview.png" alt="">
+            <label>
+		</div>
+	</header>
+	<div class="capa"></div>
+
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<nav class="interfaz">
+            <a href="{% url 'login' %}">INVENTARIO</a>
+			<a href="{% url 'login' %}">VENTAS</a>
+			<a href="{% url 'login' %}">DOMICILIOS</a>
+			<a href="{% url 'login' %}">PQRS</a>
+		</nav>
+		<label for="btn-menu">✖</label>
+	</div>
+</div>
+
+
+
+        <div class="titulin">
+        <p >COLOR IN </p>
+        </div>
+
+        <div class="botons">
+
+        <div class="BOTONES2">
+            <a class="BOTON3" href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
+        <div class="BOTONES1">
+            <a class="BOTON3" href="{% url 'iniciocliente' %}">REGISTRO</a>
+        </div>
+        <div class="BOTONES2">
+            <a class="BOTON3" href="{% url 'login' %}">INICIAR SESION</a>
+        </div>
+        
+        <!-- direccion de carrito -->
+        {% url 'carts:cart' as cart %}
+        <!-- carrito -->
+        <div class="carrito">
+            <a href="{{ cart }}">🛒</a>
+        </div>
+
+    </div>
+
+    </div>
+    <nav id="menu">
+    <div class="navegador">
+        <a href="{% url 'index' %}">INICIO</a>  
+        <a href="{% url 'mision' %}">COLOR IN</a>
+        <a href="#PRODUCTOS">PRODUCTOS</a> 
+        <a href="#SERVICIOS">SERVICIOS</a> 
+        <a href="#CONTACTO">CONTACTO</a>  
+    </div>
+
+    {% block content %}
+</nav>
+    <main class="contprincipal" id="INICIO">
+        <h1 class="CO" id="COLOR_IN">QUIENES SOMOS</h1>
+        <P> Somos una empresa con todo lo relacionado con pinturas automotriz, arquitectonica e industrial, asesorias tecnicas (colorimetria)</P>
+    </main>
+
+
+
+     <!-- PRODUCTOS -->
+
+    
+    <h1 class="PRODUCTOS" id="PRODUCTOS">PRODUCTOS</h1>
+    
+            
+            <div class="productos">
+
+                <article class="producto1">
+                    <div>
+                    <h2 >PINTURAS</h2>
+                    <a href="{% url 'catpinturas' %}">VER MAS</a>
+                </div>
+            </article>
+
+                <article class="producto2">
+                    <div>
+                    <h2>ROLLOS</h2>
+                    <a href="{% url 'catrollos' %}">VER MAS</a>
+                </div>
+                </article>
+            
+            </div>
+
+     <!-- SERVICIOS -->
+
+    <div>
+        <h1 class="SERVICIOS" id="SERVICIOS">SERVICIOS</h1>
+    </div>
+            
+            <div class="productos">
+
+                <article class="servicio1">
+                    <div>
+                    <h2>DOMICILIOS</h2>
+                    <a href="{% url 'domicilio' %}">VER MAS</a>
+                </div>
+                </article>
+
+                <article class="servicio2">
+                    <div>
+                    <h2>APLICACION</h2>
+                    <a href="{% url 'aplicacion' %}">VER MAS</a>
+                </div>
+                </article>
+            
+            </div>
+
+    {% endblock %}
+    <!-- FOOTER -->
+
+    <div>
+        <h1 class="CONTACTO" id="CONTACTO">CONTACTO</h1>
+    </div>
+    
+    
+    <footer class="Footer" id="footer">
+
+        <div>
+            <a href="https://www.whatsapp.com/?lang=es"><img src="/static/IMG/whatsapp.png" alt=""></a>
+            <a href="https://www.instagram.com/"><img src="/static/IMG/instagram.png" alt=""></a>
+            <a href="https://es-la.facebook.com/"><img src="/static/IMG/facebook.png" alt=""></i></a>
+        </div>
+    
+    </footer>
+
+    
+
+    <div>
+    <footer class="xx">
+            <h1>
+                SOFTWAT
+            </h1>
+            <a href="{% url 'PQRS' %}">PQRS</a>
+            <p>Diseñado por: Sebastian Tafur, Ivan Segura, Santiago Ceron y Holman Alfonso</p>
+            <p>Tecnico en programacion de Software</p>
+            <p>Coordinacion de tecnologia e informatica</p>
+            <p>2022</p> 
+    </footer>
+    </div>
+
+
+    <!-- Para subir -->
+    <div class="flecha" ><a href="#menu"><img src="/static/IMG/flecha.png" alt="flecha"></a></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

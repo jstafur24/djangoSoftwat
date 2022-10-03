@@ -1,0 +1,15 @@
+<!-- product -->
+<div class="container_flex">
+  <div class="card h-100">
+    {% if product %}
+      <img src="{{ product.image.url }}" alt="Imagen del Producto" height="300">
+    {% endif %}
+  <div class="card-body">
+      <h5 class="card-title text-dark">{{ product.name }}</h5>
+      <p>{{ product.price }}</p>
+  <div class="container mt-5">
+    <a href="{% url 'product' product.slug %}" class="btn btn-dark">Ver Mas</a>
+</div>
+</div>
+</div>
+</div>

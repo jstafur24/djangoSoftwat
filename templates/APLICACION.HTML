@@ -1,0 +1,74 @@
+{% extends "PAGINA_PRINCIPAL.HTML" %}
+
+{% block title %} PINTURAS {% endblock %}
+
+{% block content %}
+    <body>
+
+            <!-- 2 COLUMNA : contenido -->
+            <main class="col-12">
+                <div class="container-fluid color8 pt-5 pb-2">
+                    <form action="" class="needs-validation" novalidate>
+                        <div class="titulo">
+                            REGISTRO APLICACION
+                        </div>
+            <!-- 1 fila -->
+            <div class="row justify-content-between mb-3">
+                <div class="col-sm-4">
+                    <input type="text" required placeholder="Marca" minlength="5" maxlength="20" class="form-control">
+                    <div class="valid-feedback">Perfecto!</div>
+                    <div class="invalid-feedback">Completa La Celda.</div>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" required placeholder="Modelo" minlength="10" maxlength="30" size="30" class="form-control" >
+                    <div class="valid-feedback">Perfecto!</div>
+                    <div class="invalid-feedback">Completa La Celda.</div>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" required placeholder="Matricula" class="form-control">
+                    <div class="valid-feedback">Perfecto!</div>
+                    <div class="invalid-feedback">Completa La Celda.</div>
+                 </div>
+            </div>
+            <!-- 2 fila -->
+            <div class="row justify-content-between mb-3">
+                <div class="col-sm-3">
+                    <h6>Color Del vehiculo</h6>
+                    <input type="color" name="colorvehiculo" id="colorvehiculo" class="form-select">
+                    <div class="valid-feedback">Perfecto!</div>
+                    <div class="invalid-feedback">Completa La Celda.</div>
+                </div>
+                <div class="col-sm-6">
+                    <select name="" id="" class="form-select">
+                            <option value="0">Tornasol</option>
+                            <option value="1">Mate</option>
+                            <option value="2">Brillante</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <h6>Color De Cambio</h6>
+                    <input type="color" name="colorcambio" id="colorcambio" class="form-select">
+                    <div class="valid-feedback">Perfecto!</div>
+                    <div class="invalid-feedback">Completa La Celda.</div>
+                </div>
+            </div>
+            <!-- 3 fila -->
+            <div class="row mb-3">
+                <div class="col d-grid gap-2 d-sm-grid">
+                    <input type="submit" class="btn btn-dark d-sm-block" value="REGISTRAR VEHICULO">
+                </div>
+                <div class="col d-grid gap-2 d-sm-grid">
+                    <input type="reset" class="btn btn-dark d-sm-block" value="CANCELAR">
+                </div>
+            </div>
+            <div class="col d-grid gap-2 d-sm-grid">
+                <a href="{% url 'index' %}" class="btn btn-dark d-sm-block">SALIR</a>
+            </div>
+
+
+
+        </form>
+    </div> 
+</body>
+
+{% endblock %}

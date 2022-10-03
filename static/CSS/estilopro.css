@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Carter+One&family=Cinzel&family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Carter+One&family=Cinzel&family=Luckiest+Guy&family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Carter+One&family=Cinzel&family=Oleo+Script&family=Sanchez&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+/* FUENTE MENUS CATALOGOS*/
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@1,900&family=Secular+One&display=swap');
+header{
+    background: rgb(0, 0, 0);
+    font-size: 2vw;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 2px 2px rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+.column1{
+    width: 50%;
+    border-bottom-left-radius: 25px;
+    margin: 15px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5%;
+    background-color:rgba(169, 170, 175, 0.884)
+    
+}
+
+.column1 h3{
+    font-size: 2vw;
+}
+
+.column1 h4{
+    font-size: 2vw;
+}
+
+.column1 p{
+    font-size: 1vw;
+}
+
+
+.PinturaProducto{
+    display: flex;
+    width: 100%;
+    padding-left: 8.5%;
+    padding-right: 8.5%;
+    
+}
+
+.Pinturas{
+    display: flex;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+
+}
+
+
+.headerRoyos {
+   display: flex;
+   /* FUENTE MENUS CATALOGOS*/
+   font-family: 'Secular One', sans-serif;
+}
+
+.headerRoyosh1{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    /* FUENTE MENUS CATALOGOS*/
+    font-family: 'Secular One', sans-serif;
+
+}
+
+.headerRoyosh2 a{
+    color: white;
+    text-decoration: none;
+    
+    font-size: 1vw;
+}
+
+.headerRoyosh2{
+    
+    width: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1%;
+    
+}
+
+
+
+article img{
+width: 70%;
+height: 70%;
+border-radius: 50%;
+
+
+}
+
+h3 {
+color: rgb(0, 0, 0);
+margin: 20px ;
+font-size: 40px;
+font-family: 'Secular One', sans-serif;
+}
+
+
+article p{
+font-family: 'Cinzel', serif;
+color: rgb(0, 0, 0);
+
+}
+
+h4{
+font-family: 'Cinzel', serif;
+font-size: 40px;
+color: rgb(0, 0, 0);
+font-family: 'Secular One', sans-serif;
+}
+
+.rollosmenus {
+    background-color: #f3eae8;
+    text-decoration: none;
+    text-shadow: none;
+    background-image: url(../IMG/Banner3.png)
+
+}
+
+.pinturasmenus {
+    background-color: #f3eae8;
+    text-decoration: none;
+    text-shadow: none;
+    background-image: url(../IMG/banner2.png);
+}
+
